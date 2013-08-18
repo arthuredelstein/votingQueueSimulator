@@ -90,15 +90,13 @@ def saveStats(machineTime,numMachines,votersPerMachine,statData):
     savetxt(f1,statData,fmt='%g',delimiter='\t')
     f1.close()
 
-def runHugeBatch():
-    # This function computes 10000 trials with a variety of parameters.
-    
-    # Set up ranges of parameters of interest:
-    machineTimeList = [2, 5, 7, 10, 15]
-    numMachinesList = [2, 5, 10, 15, 20]
-    votersPerMachineList = [50, 100, 150, 200, 300]
-    thresholdWaitingTimeList = [15, 30, 60, 90, 120]
-    numTrials = 10000
+def runHugeBatch(
+  numTrials = 10000,
+  machineTimeList = [2, 5, 7, 10, 15],
+  numMachinesList = [2, 5, 10, 15, 20],
+  votersPerMachineList = [50, 100, 150, 200, 300],
+  thresholdWaitingTimeList = [15, 30, 60, 90, 120]):
+    # Initialize:
     count=0
     dataRowList = []
     
@@ -110,7 +108,7 @@ def runHugeBatch():
                 count +=1
                 print count,machineTime,numMachines,votersPerMachine
                 
-                # Run the 10000 trials and save their results
+                # Run the 10000 trials and save their results:
                 waitMaxes,lastVoterDepatures = runMultipleTrials(numTrials = numTrials, numMachines = numMachines, machineTime = machineTime, meanTotalVoters = meanTotalVoters)
                 saveStats(machineTime,numMachines,votersPerMachine,transpose(vstack((waitMaxes,lastVoterDepatures))))
                 
@@ -129,7 +127,7 @@ def runHugeBatch():
 
 
 def plotAFewRuns():
-    # This plots a smal number of trials.
+    # This plots a small number of trials.
     numMachines=10
     machineTime =5
     meanTotalVoters = 1500
