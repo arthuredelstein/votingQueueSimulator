@@ -1,4 +1,4 @@
-## Voting Queue Simulation Script Usage Instructions
+### Voting Queue Simulation Script Usage Instructions
 
 - Arthur D. Edelstein, arthuredelstein@gmail.com
 - William A. Edelstein, w.edelstein@gmail.com
