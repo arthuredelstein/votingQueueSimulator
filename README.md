@@ -3,7 +3,7 @@
 - Arthur D. Edelstein, arthuredelstein@gmail.com
 - William A. Edelstein, w.edelstein@gmail.com
 
-Source code from [Edelstein, William A., and Arthur D. Edelstein. "Queuing and elections: long lines, DREs and paper ballots." Proceedings of EVT/WOTE 2010.](http://bit.ly/T2BEFr)
+Source code from [Edelstein, William A., and Arthur D. Edelstein. "Queuing and elections: long lines, DREs and paper ballots." Proceedings of EVT/WOTE 2010.](http://static.usenix.org/events/evt/tech/full_papers/Edelstein.pdf)
 
 The accompanying code, (./voteQueueSimulator.py), was used to simulate the queuing of voters at a polling station. The code assumes that during each voting period, voters arrive at the polling station with a fixed number of voting machines (`numMachines`) in a Poisson process (voter arrival has constant probability per unit time). An array of pseudorandomly-generated times (`arrivalTimes`) is created by the function `generateArrivalTimes`.
 
