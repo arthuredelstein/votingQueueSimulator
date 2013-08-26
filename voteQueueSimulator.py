@@ -1,3 +1,7 @@
+# Copyright 2013, William Edelstein, Arthur Edelstein
+# All rights reserved.
+# (BSD 2-Clause License attached)
+#
 # These packages are available at http://scipy.org and http://matplotlib.sourceforge.net
 from scipy import *
 from pylab import *
